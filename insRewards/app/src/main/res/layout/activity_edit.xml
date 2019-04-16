@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context=".EditActivity">
+
+    <ImageView
+        android:id="@+id/editUserPhoto"
+        android:layout_width="152dp"
+        android:layout_height="225dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="12dp"
+        android:onClick="captureImageEditActivity"
+        android:scaleType="fitXY"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/default_photo" />
+
+    <EditText
+        android:id="@+id/editUname"
+        android:layout_width="0dp"
+        android:layout_height="44dp"
+        android:layout_marginStart="19dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="8dp"
+        android:background="#D7D7D6"
+
+        android:clickable="false"
+        android:cursorVisible="false"
+        android:ems="10"
+        android:focusable="false"
+
+        android:focusableInTouchMode="false"
+        android:hint="@string/createUsernamePrompt"
+        android:inputType="textPersonName"
+        android:textColorHint="#FF178E7E"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/editUserPhoto"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editPass"
+        android:layout_width="0dp"
+        android:layout_height="38dp"
+        android:layout_marginTop="12dp"
+        android:ems="10"
+        android:textColorHint="#FF178E7E"
+        android:hint="@string/createPasswordPrompt"
+        android:inputType="textPassword"
+        android:background="#D7D7D6"
+        app:layout_constraintEnd_toEndOf="@+id/editUname"
+        app:layout_constraintStart_toStartOf="@+id/editUname"
+        app:layout_constraintTop_toBottomOf="@+id/editUname" />
+
+    <CheckBox
+        android:id="@+id/editChkBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="@string/checkAdminPrompt"
+        android:textColor="#FF178E7E"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/editPass"
+        app:layout_constraintStart_toStartOf="@+id/editPass"
+        app:layout_constraintTop_toBottomOf="@+id/editPass" />
+    <EditText
+        android:id="@+id/editFirstName"
+        android:layout_width="0dp"
+        android:layout_height="38dp"
+        android:layout_marginTop="8dp"
+        android:background="#D7D7D6"
+        android:ems="10"
+        android:hint="@string/firstNamePrompt"
+        android:inputType="textPersonName"
+        android:textColorHint="#FF178E7E"
+        app:layout_constraintEnd_toEndOf="@+id/editPass"
+        app:layout_constraintStart_toStartOf="@+id/editPass"
+        app:layout_constraintTop_toBottomOf="@+id/editChkBox" />
+
+    <EditText
+        android:id="@+id/editLastName"
+        android:layout_width="0dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="10dp"
+        android:background="#D7D7D6"
+        android:ems="10"
+        android:hint="@string/lastNamePrompt"
+        android:inputType="textPersonName"
+        android:textColorHint="#FF178E7E"
+        app:layout_constraintEnd_toEndOf="@+id/editFirstName"
+        app:layout_constraintStart_toStartOf="@+id/editFirstName"
+        app:layout_constraintTop_toBottomOf="@+id/editFirstName" />
+
+    <TextView
+        android:id="@+id/editDptView"
+        android:layout_width="119dp"
+        android:layout_height="28dp"
+        android:text="@string/createDept_lbl"
+        android:textSize="18sp"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="274dp" />
+
+    <TextView
+        android:id="@+id/editPosView"
+        android:layout_width="0dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="36dp"
+        android:text="@string/positionView"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@+id/editDptView"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/editDptView"
+        app:layout_constraintTop_toBottomOf="@+id/editDptView" />
+
+    <EditText
+        android:id="@+id/editDept"
+        android:layout_width="0dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+
+        android:background="#D7D7D6"
+        android:ems="10"
+        android:hint="@string/departmentPrompt"
+        android:inputType="textPersonName"
+        android:textColorHint="#FF178E7E"
+        app:layout_constraintBaseline_toBaselineOf="@+id/editDptView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/editDptView" />
+
+    <EditText
+        android:id="@+id/editPos"
+        android:layout_width="0dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="32dp"
+        android:background="#D7D7D6"
+        android:ems="10"
+        android:hint="@string/positionPrompt"
+        android:inputType="textPersonName"
+        android:textColorHint="#FF178E7E"
+        app:layout_constraintEnd_toEndOf="@+id/editDept"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/editDept"
+        app:layout_constraintTop_toBottomOf="@+id/editDept" />
+
+    <TextView
+        android:id="@+id/editStoryView"
+        android:layout_width="0dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="36dp"
+        android:text="@string/storyView"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@+id/editPosView"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/editPosView"
+        app:layout_constraintTop_toBottomOf="@+id/editPosView" />
+
+    <EditText
+        android:id="@+id/editStory"
+        android:layout_width="0dp"
+        android:layout_height="175dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="#D7D7D6"
+        android:ems="10"
+        android:gravity="top"
+        android:hint="@string/storyPrompt"
+        android:inputType="textMultiLine"
+        android:maxLength="360"
+        android:textColorHint="#FF178E7E"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editStoryView"
+        app:layout_constraintVertical_bias="0.041" />
+
+    <TextView
+        android:id="@+id/editAvailChars"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:textSize="18sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/editStoryView"
+        app:layout_constraintEnd_toEndOf="@+id/editPos"
+        app:layout_constraintStart_toStartOf="@+id/editPos"
+        app:layout_constraintTop_toBottomOf="@+id/editPos" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="@+id/editUserPhoto"
+        app:layout_constraintEnd_toEndOf="@+id/editUserPhoto"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/editUserPhoto"
+        app:srcCompat="@android:drawable/ic_menu_add" />
+</android.support.constraint.ConstraintLayout>
